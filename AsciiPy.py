@@ -14,7 +14,7 @@ class AsciiText :
     def GenerateText(self, text, font):
         
         q = text.replace(" ","+")
-        r = requests.get('http://artii.herokuapp.com/make?text='+q+'&font='+font)
+        r = requests.get(f'http://artii.herokuapp.com/make?text={q}&font={font}')
         print(r.text)
         return r.text
         
